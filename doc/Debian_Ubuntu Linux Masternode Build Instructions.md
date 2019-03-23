@@ -35,13 +35,13 @@ daemon=1
 logintimestamps=1
 maxconnections=256
 masternode=1
-externalip=yourvpsIP:3010
+externalip=yourvpsIP:34441
 masternodeprivkey=xxxxxxxxxxxxxxxxx (that you get in windows console)
 ```
 now we come back to windows wallet, go to tools, and open masternode conf file and add:
 ```
 MN1 IP:PORT masternodekey masternodeouputs txnumber
-EXAMPLE: 38.25.122.251:31000 7NEGGttKZojkAzViEYXXXxKTFdAtC2uSiMg8NSFqYVBtN6mYdU 7a1ebb4baadf9ff39bbbfc2d58fd57ff15b65a5096069c8XXX3fb4cb5c 1
+EXAMPLE: 38.25.122.251:34441 7NEGGttKZojkAzViEYXXXxKTFdAtC2uSiMg8NSFqYVBtN6mYdU 7a1ebb4baadf9ff39bbbfc2d58fd57ff15b65a5096069c8XXX3fb4cb5c 1
 ```
 save masternode conf file reopen wallet and in masternode section type START ALL
 

@@ -1,7 +1,5 @@
 # SPE
 
-spectrumx is a peer-to-peer decentralized digital currency for ordinary people, easy to use and acquire.
-
 SpectrumX is fork of Pivx, improved with some of the following features: 
 
 - Fast transaction aprox. 400 tx/s 
@@ -32,6 +30,7 @@ Spectrumx Specifications:
 # Debian/Ubuntu Linux Daemon Build Instructions
 
 ```
+(Install deps: https://github.com/SPECTRUMXCOIN/SpectrumX/blob/master/doc/build-unix.md)
 git clone https://github.com/SPECTRUMXCOIN/SpectrumX
 cd SpectrumX
 ./autogen.sh
