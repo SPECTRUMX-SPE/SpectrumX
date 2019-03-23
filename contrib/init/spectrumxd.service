@@ -1,0 +1,26 @@
+[Unit]
+Description=spectrumx's distributed currency daemon
+After=network.target
+
+[Service]
+User=spectrumx
+Group=spectrumx
+
+Type=forking
+PIDFile=/var/lib/spectrumxd/spectrumxd.pid
+
+ExecStart=/usr/bin/spectrumxd -daemon -pid=/var/lib/spectrumxd/spectrumxd.pid \
+          -conf=/etc/spectrumx/spectrumx.conf -datadir=/var/lib/spectrumxd
+
+ExecStop=-/usr/bin/spectrumx-cli -conf=/etc/spectrumx/spectrumx.conf \
+         -datadir=/var/lib/spectrumxd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

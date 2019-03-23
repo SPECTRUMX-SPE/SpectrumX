@@ -1,0 +1,11 @@
+[Protocol]
+exec=spectrumx-qt '%u'
+protocol=spectrumx
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
