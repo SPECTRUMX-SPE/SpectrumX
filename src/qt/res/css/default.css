@@ -65,14 +65,14 @@ QMenu::item:selected {
 }
 
 QToolBar {
-	background-color: #0c306c;
+	background-color: #FFC300;
 	border: 0px solid #fff;
 	padding: 0;
 	margin: 0;
 }
 
 QToolBar > QToolButton {
-	background-color:#0c306c;
+	background-color:#FFC300;
 	border:0px solid #333;
 	selection-background-color:transparent;
 	min-height: 2.5em;
@@ -106,13 +106,13 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-	background-color: #0c306c;
+	background-color: #FFC300;
 	width: 20px;
 }
 
 QLabel#progressBarLabel {
 	background-color: transparent;
-	color: #0c306c;
+	color: #FFC300;
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -136,7 +136,7 @@ QTabBar::tab:hover:!selected {
 }
 
 QWidget {
-	selection-background-color:#0c306c; /* Object highlight color */
+	selection-background-color:#FFC300; /* Object highlight color */
 	selection-color:#fff;
 	outline:0; /* Remove Annoying Focus Rectangle */
 }
@@ -209,10 +209,10 @@ QLabel { /* Base Text Size & Color */
 /***************************** Global Qt Objects ***********************************************************/
 
 QPushButton { /* Global Button Style */
-	background-color: #0c306c;
+	background-color: #FFC300;
 	border-width: 1px;
 	border-style: outset;
-	border-color: #0c306c;
+	border-color: #FFC300;
 	border-radius: 2px;
 	color:#ffffff;
 	font-size:12px;
@@ -230,7 +230,7 @@ QPushButton:hover {
 }
 
 QPushButton:pressed {
-	background-color: #0c306c;
+	background-color: #FFC300;
 	border:1px solid #000000;
 }
 
@@ -268,7 +268,7 @@ QComboBox:checked {
 }
 
 QComboBox:editable {
-	background:#0c306c;
+	background:#FFC300;
 	color:#616161;
 	border:0px solid transparent;
 }
@@ -380,7 +380,7 @@ QHeaderView { /* Table Header */
 
 QHeaderView::section { /* Table Header Sections */
 	qproperty-alignment:center;
-	background-color: #0c306c;
+	background-color: #FFC300;
 	color:#fff;
 	min-height:25px;
 	font-weight:bold;
@@ -421,7 +421,7 @@ QTableView::item { /* Table Item */
 }
 
 QTableView::item:selected { /* Table Item Selected */
-	background-color:#0c306c;
+	background-color:#FFC300;
 	color:#fff;
 }
 
@@ -458,7 +458,7 @@ QScrollBar::handle:vertical { /* Scroll Bar Slider - vertical */
 }
 
 QScrollBar::handle:vertical:pressed { /* Scroll Bar Slider - vertical */
-	background:#0c306c;
+	background:#FFC300;
 	min-height:10px;
 }
 
@@ -475,7 +475,7 @@ QScrollBar::handle:horizontal { /* Scroll Bar Slider - horizontal */
 }
 
 QScrollBar::handle:horizontal:pressed { /* Scroll Bar Slider - horizontal */
-	background:#0c306c;
+	background:#FFC300;
 	min-width:10px;
 }
 
@@ -550,7 +550,7 @@ QSlider::sub-page:horizontal {
 }
 
 QSlider::add-page:horizontal {
-	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #0c306c, stop: 1 #0cb2e3);
+	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FFC300, stop: 1 #0cb2e3);
 	border: 1px solid #333;
 	height: 10px;
 	border-radius: 4px;
@@ -923,7 +923,7 @@ QWidget .QFrame#frameBalances .QLabel#labelBalance { /* Available Balance */
 	qproperty-alignment: 'AlignVCenter | AlignLeft';
 	font-size: 14px;
 	font-weight: normal;
-	color: #0c306c;
+	color: #FFC300;
 }
 
 QWidget .QFrame#frameBalances .QLabel#labelWatchTotal { /* Watch-only Total Balance */

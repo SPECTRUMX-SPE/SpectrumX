@@ -321,7 +321,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     sendIcon.addPixmap(sendIconActive,QIcon::Active,QIcon::Off);
 
     sendCoinsAction = new QAction(sendIcon, tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a REL address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a SPE address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
