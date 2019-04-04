@@ -1618,11 +1618,21 @@ double ConvertBitsToDouble(unsigned int nBits)
 int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
- if (nHeight == 0) { nSubsidy = 0 * COIN;
-    } else if (nHeight == 1)                          { nSubsidy = 9600000 * COIN; //premimed
-    } else if (nHeight > 1 && nHeight <= 200)       { nSubsidy = 8 * COIN;
-    } else if (nHeight > 201) { nSubsidy = 7 * COIN; }
-
+	
+	if(IsTreasuryBlock(nHeight)) {
+        LogPrintf("GetBlockValue(): this is a treasury block\n");
+		nSubsidy = GetTreasuryAward(nHeight);
+	} else {
+ 	if (nHeight == 0) { nSubsidy = 0 * COIN;
+   	} else if (nHeight == 1)                          { 
+		nSubsidy = 9600000 * COIN; //premimed
+    } else if (nHeight > 1 && nHeight <= 200)       { 
+		nSubsidy = 8 * COIN;
+    } else if (nHeight > 201) { 
+		nSubsidy = 7 * COIN; 
+	  }
+	}
+	
     return nSubsidy;
 }
 
@@ -1630,6 +1640,30 @@ int64_t GetBlockValue(int nHeight)
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
     return 5 * COIN;
+}
+
+int nStartTreasuryBlock = 25000;
+int nTreasuryBlockStep = 1440;
+
+bool IsTreasuryBlock(int nHeight)
+{
+	if(nHeight < nStartTreasuryBlock)
+		return false;
+	else if( (nHeight-nStartTreasuryBlock) % nTreasuryBlockStep == 0)
+		return true;
+	else
+		return false;
+}
+
+int64_t GetTreasuryAward(int nHeight)
+{
+	if(IsTreasuryBlock(nHeight)) {
+		if(nHeight == nStartTreasuryBlock)
+			return 1442 * COIN; //4320 for the first treasury block
+		else
+			return 1442 * COIN; //4320 for each next block
+	} else
+		return 0;
 }
 
 bool IsInitialBlockDownload()
