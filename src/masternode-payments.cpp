@@ -314,13 +314,15 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
 }
 
 
-void FillBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake)
+void FillBlockPayee(CMutableTransaction& txNew, int64_t nFees, bool fProofOfStake)
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
     if (!pindexPrev) return;
 
     if (IsSporkActive(SPORK_13_ENABLE_SUPERBLOCKS) && budget.IsBudgetPaymentBlock(pindexPrev->nHeight + 1)) {
         budget.FillBlockPayee(txNew, nFees, fProofOfStake);
+	} else if(IsTreasuryBlock(pindexPrev->nHeight)) {
+		budget.FillTreasuryBlockPayee(txNew, nFees, fProofOfStake);
     } else {
         masternodePayments.FillBlockPayee(txNew, nFees, fProofOfStake);
     }
@@ -330,8 +332,6 @@ std::string GetRequiredPaymentsString(int nBlockHeight)
 {
     if (IsSporkActive(SPORK_13_ENABLE_SUPERBLOCKS) && budget.IsBudgetPaymentBlock(nBlockHeight)) {
         return budget.GetRequiredPaymentsString(nBlockHeight);
-	} else if(IsTreasuryBlock(pindexPrev->nHeight)) {
-		budget.FillTreasuryBlockPayee(txNew, nFees, fProofOfStake);
     } else {
         return masternodePayments.GetRequiredPaymentsString(nBlockHeight);
     }
