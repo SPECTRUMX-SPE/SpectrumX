@@ -30,9 +30,9 @@ Rewards:
 
 - POW blocks: 8 SPE
 - POS blocks: 7 SPE
---Masternode: 5 SPE
---POS usual: 2 SPE
--Budget System: 1442 SPEs every 1440 blocks if budget system is ON 
+- Masternode: 5 SPE
+- POS usual: 2 SPE
+- Budget System: 1442 SPEs every 1440 blocks if budget system is ON 
 
 # Debian/Ubuntu Linux Daemon Build Instructions
 
