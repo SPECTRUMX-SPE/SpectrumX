@@ -28,8 +28,8 @@ Spectrumx Specifications:
 
 Rewards:
 
-- POW blocks: 8 SPE
-- POS blocks: 7 SPE
+- POW blocks: 8 SPE (test)
+- POS blocks: 7 SPE (test)
 - Masternode: 5 SPE
 - POS usual: 2 SPE
 - Budget System: 1442 SPEs every 1440 blocks if budget system is ON 
