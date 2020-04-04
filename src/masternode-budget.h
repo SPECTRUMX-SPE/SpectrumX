@@ -362,7 +362,7 @@ public:
 
     //check to see if we should vote on this
     void AutoCheck();
-    //total bitg paid out by this budget
+    //total spe paid out by this budget
     CAmount GetTotalPayout();
     //vote on this finalized budget as a masternode
     void SubmitVote();

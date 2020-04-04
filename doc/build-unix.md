@@ -208,7 +208,7 @@ Hardening enables the following features:
     `scanelf -e ./spectrumxd`
 
     the output should contain:
-	STK/REL/PTL
+	STK/SPE/PTL
 	RW- R-- RW-
 
     The STK RW- means that the stack is readable and writeable but not executable.
