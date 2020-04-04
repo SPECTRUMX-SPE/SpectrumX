@@ -19,18 +19,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(REL);
-    unitlist.append(mREL);
-    unitlist.append(uREL);
+    unitlist.append(SPE);
+    unitlist.append(mSPE);
+    unitlist.append(uSPE);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case REL:
-    case mREL:
-    case uREL:
+    case SPE:
+    case mSPE:
+    case uSPE:
         return true;
     default:
         return false;
@@ -40,12 +40,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case REL:
-        return QString("bitg");
-    case mREL:
-        return QString("mbitg");
-    case uREL:
-        return QString::fromUtf8("ubitg");
+    case SPE:
+        return QString("spe");
+    case mSPE:
+        return QString("mspe");
+    case uSPE:
+        return QString::fromUtf8("uspe");
     default:
         return QString("???");
     }
@@ -55,22 +55,22 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case REL:
+        case SPE:
             return QString("SPE");
-        case mREL:
+        case mSPE:
             return QString("mSPE");
-        case uREL:
+        case uSPE:
             return QString::fromUtf8("μSPE");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case REL:
+        case SPE:
             return QString("tSPE");
-        case mREL:
+        case mSPE:
             return QString("mtSPE");
-        case uREL:
+        case uSPE:
             return QString::fromUtf8("μtSPE");
         default:
             return QString("???");
@@ -82,22 +82,22 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case REL:
+        case SPE:
             return QString("SPE");
-        case mREL:
+        case mSPE:
             return QString("Milli-SPE (1 / 1" THIN_SP_UTF8 "000)");
-        case uREL:
+        case uSPE:
             return QString("Micro-SPE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case REL:
+        case SPE:
             return QString("TestSPEs");
-        case mREL:
+        case mSPE:
             return QString("Milli-TestSPE (1 / 1" THIN_SP_UTF8 "000)");
-        case uREL:
+        case uSPE:
             return QString("Micro-TestSPE (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
@@ -108,11 +108,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case REL:
+    case SPE:
         return 100000000;
-    case mREL:
+    case mSPE:
         return 100000;
-    case uREL:
+    case uSPE:
         return 100;
     default:
         return 100000000;
@@ -122,11 +122,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case REL:
+    case SPE:
         return 8;
-    case mREL:
+    case mSPE:
         return 5;
-    case uREL:
+    case uSPE:
         return 2;
     default:
         return 0;

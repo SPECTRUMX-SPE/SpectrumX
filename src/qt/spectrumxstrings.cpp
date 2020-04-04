@@ -81,10 +81,10 @@ QT_TRANSLATE_NOOP("spectrumx-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("spectrumx-core", ""
-"Fees (in REL/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in SPE/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("spectrumx-core", ""
-"Fees (in REL/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in SPE/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("spectrumx-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -168,7 +168,7 @@ QT_TRANSLATE_NOOP("spectrumx-core", ""
 "Unable to bind to %s on this computer. spectrumx Core is probably already running."),
 QT_TRANSLATE_NOOP("spectrumx-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
-"REL."),
+"SPE."),
 QT_TRANSLATE_NOOP("spectrumx-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -276,7 +276,7 @@ QT_TRANSLATE_NOOP("spectrumx-core", "Failed to listen on any port. Use -listen=0
 QT_TRANSLATE_NOOP("spectrumx-core", "Failed to read block index"),
 QT_TRANSLATE_NOOP("spectrumx-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("spectrumx-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("spectrumx-core", "Fee (in REL/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("spectrumx-core", "Fee (in SPE/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("spectrumx-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("spectrumx-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("spectrumx-core", "Found enough users, signing ( waiting %s )"),
