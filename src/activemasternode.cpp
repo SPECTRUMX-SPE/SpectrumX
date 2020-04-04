@@ -17,7 +17,7 @@
 CActiveMasternode activeMasternode;
 
 //
-// Bootup the Masternode, look for a SPE collateral input and register on the network
+// Bootup the Masternode, look for a REL collateral input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {

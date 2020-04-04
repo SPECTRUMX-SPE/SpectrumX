@@ -496,9 +496,9 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bitcoinaddressvalidator.cpp \
 	qt/res/icons/transaction_conflicted.png \
 	qt/res/icons/tx_inout.png qt/res/icons/tx_input.png \
 	qt/res/icons/tx_output.png qt/res/icons/tx_mined.png \
-	qt/res/icons/unit_spe.png qt/res/icons/unit_mspe.png \
-	qt/res/icons/unit_uspe.png qt/res/icons/unit_tspe.png \
-	qt/res/icons/unit_tmspe.png qt/res/icons/unit_tuspe.png \
+	qt/res/icons/unit_bitg.png qt/res/icons/unit_mbitg.png \
+	qt/res/icons/unit_ubitg.png qt/res/icons/unit_tbitg.png \
+	qt/res/icons/unit_tmbitg.png qt/res/icons/unit_tubitg.png \
 	qt/res/images/spectrumx_logo_horizontal.png \
 	qt/res/images/about.png qt/res/images/splash.png \
 	qt/res/images/splash_testnet.png \
@@ -2152,12 +2152,12 @@ EXTRA_DIST = leveldb $(am__append_18)
 @ENABLE_QT_TRUE@  qt/res/icons/tx_input.png \
 @ENABLE_QT_TRUE@  qt/res/icons/tx_output.png \
 @ENABLE_QT_TRUE@  qt/res/icons/tx_mined.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_spe.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_mspe.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_uspe.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_tspe.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_tmspe.png \
-@ENABLE_QT_TRUE@  qt/res/icons/unit_tuspe.png
+@ENABLE_QT_TRUE@  qt/res/icons/unit_bitg.png \
+@ENABLE_QT_TRUE@  qt/res/icons/unit_mbitg.png \
+@ENABLE_QT_TRUE@  qt/res/icons/unit_ubitg.png \
+@ENABLE_QT_TRUE@  qt/res/icons/unit_tbitg.png \
+@ENABLE_QT_TRUE@  qt/res/icons/unit_tmbitg.png \
+@ENABLE_QT_TRUE@  qt/res/icons/unit_tubitg.png
 
 @ENABLE_QT_TRUE@BITCOIN_QT_CPP = qt/bitcoinaddressvalidator.cpp \
 @ENABLE_QT_TRUE@	qt/bitcoinamountfield.cpp qt/bitcoingui.cpp \

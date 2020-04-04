@@ -1334,8 +1334,8 @@ Address: %4
     </message>
     <message>
         <location line="+238"/>
-        <source>Can vary +/- %1 uspe per input.</source>
-        <translation>Can vary +/- %1 uspe per input.</translation>
+        <source>Can vary +/- %1 ubitg per input.</source>
+        <translation>Can vary +/- %1 ubitg per input.</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="-334"/>
